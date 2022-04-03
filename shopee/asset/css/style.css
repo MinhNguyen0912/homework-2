@@ -98,9 +98,9 @@ header i{
     display: none;
     transform-origin: 90% top;
     animation: scaleUp ease 0.2s;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);    flex-direction: column;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);  
+    flex-direction: column;
     border-radius: 2px;
-    overflow: hidden;
     z-index: 2;
 }
 .notice-content{
