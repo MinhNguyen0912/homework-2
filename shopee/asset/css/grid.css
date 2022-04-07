@@ -59,6 +59,10 @@
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
 }
+.c-5-c {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
 
 .c-6 {
     flex: 0 0 50%;
@@ -288,8 +292,8 @@
     }
 
     .col {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .row.sm-gutter .col {
