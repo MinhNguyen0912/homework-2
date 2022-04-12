@@ -47,3 +47,15 @@ html{
     position: absolute;
     border-color: transparent transparent #fff transparent;
 }
+@keyframes goUp{
+    
+}
+.separate::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: #fff;
+    height: 14px;
+    left: -8px;
+}

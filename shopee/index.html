@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./asset/css/grid.css">
     <link rel="stylesheet" href="./asset/css/base.css">
     <link rel="stylesheet" href="./asset/css/style.css">
-    <link rel="stylesheet" href="./asset/css/grid.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1d850e7f12.js" crossorigin="anonymous"></script></head>
+    <link rel="stylesheet" href="./asset/css/responsive.css">
 <body>
     <!-- header__nav -->
     <header id="header">
-        <div class="header__nav">
+        <div class="header__nav grid wide">
             <ul class="header__nav-items">
                 <li class="header__nav-item"><a href="#">Kênh người bán</a></li>
                 <li class="header__nav-item separate qr-code-show"><a href="#">Tải ứng dụng</a>
@@ -80,7 +81,7 @@
             </ul>
         </div>
         <!-- header__content -->
-        <div class="header__content">
+        <div class="header__content grid wide">
             <div class="header__content--logo">
                 <svg viewBox="0 0 192 65" class="header__logo-icon">
                     <g fill-rule="evenodd">
@@ -126,8 +127,8 @@
                     <a class="header__search-sug" href="#">Áo khoác</a>
                     <a class="header__search-sug" href="#">Áo croptop</a>
                     <a class="header__search-sug" href="#">Móng tay giả</a>
-                    <a class="header__search-sug" href="#">Áo thun</a>
-                    <a class="header__search-sug" href="#">Giày</a>
+                    <a class="header__search-sug res-tab-hide" href="#">Áo thun</a>
+                    <a class="header__search-sug res-tab-hide" href="#">Giày</a>
                 </div>
             </div>
             <div class="header__content-buy">
@@ -138,350 +139,453 @@
                 </div>
             </div>
         </div>
+        <div class="header__mobile">
+            <i class="fa-solid fa-arrow-left c-2"></i>
+            <input class="c-8" type="text" placeholder="Tìm kiếm trong shop">
+            <i class="fa-solid fa-cart-shopping c-2"></i>
+            <div class="header__search-his">
+                <p>Lịch sử tìm kiếm</p>
+                <div class="header__search-his-items">
+                    <a href="#" class="header__search-his-item">Bao cao su</a>
+                    <a href="#" class="header__search-his-item">Bắn trong</a>
+                    <a href="#" class="header__search-his-item">Chơi trần</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile-nav">
+            <div class="header__mobile-nav-1 js-mobileBtns1">
+                <p class="js-mobileBtn1 add__text-decor">Sản phẩm</p>
+                <p class="js-mobileBtn1 separate">Màn hình</p>
+                <p class="js-mobileBtn1 separate">Thiết bị lưu trữ</p>
+            </div>
+            <div class="header__mobile-nav-2 js-mobileBtns2">
+                <p class="js-mobileBtn2 add__text-decor">Phổ biến</p>
+                <p class="js-mobileBtn2 separate">Mới nhất</p>
+                <p class="js-mobileBtn2 separate">Bán chạy</p>
+                <label for="change__price-mobile" class="btnmb js-mobileBtn2 separate">
+                    Giá
+                    <input id="change__price-mobile" type="checkbox">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </label>
+            </div>
+        </div>
     </header>
-    <div id="content" class="row">
-        <div class="content__nav col c-2">
-            <div class="content__nav-name">
-                <i class="fa-solid fa-list"></i>
-                <p>DANH MỤC</p>
+    <content id="content" class="row">
+        <div class="content1 row">
+            <div class="content__nav col l-2 m-2 c-0">
+                <div class="content__nav-name">
+                    <i class="fa-solid fa-list"></i>
+                    <p>DANH MỤC</p>
+                </div>
+                <div class="content__nav-name-items js-listItems">
+                    <a class="content__nav-name-item js-item default-color-item">Sản phẩm</a>
+                    <a class="content__nav-name-item js-item">Màn hình</a>
+                    <a class="content__nav-name-item js-item">Thiết bị lưu trữ</a>
+                    <a class="content__nav-name-item js-item">Máy tính bàn</a>
+                    <a class="content__nav-name-item js-item">Ram máy tính</a>
+                    <a class="content__nav-name-item js-item">Case máy tính</a>
+                </div>
             </div>
-            <div class="content__nav-name-items js-listItems">
-                <a class="content__nav-name-item js-item default-color-item">Sản phẩm</a>
-                <a class="content__nav-name-item js-item">Màn hình</a>
-                <a class="content__nav-name-item js-item">Thiết bị lưu trữ</a>
-                <a class="content__nav-name-item js-item">Máy tính bàn</a>
-                <a class="content__nav-name-item js-item">Ram máy tính</a>
-                <a class="content__nav-name-item js-item">Case máy tính</a>
+            <div class="content__items col l-10 m-10 c-12">
+                <div class="content__items-nav">
+                    <div class="content__items-nav-left">
+                        <div class="content__items-nav-info">
+                            <p style="background-color: #EDEDED; cursor: default;">Sắp xếp theo</p>
+                            <div class="content__items-nav-info-main js-itemBox">
+                                <p class="js-itemEle js-p add-background-color add-text-color">Phổ biến</p>
+                                <p class="js-itemEle js-p">Mới nhất</p>
+                                <p class="js-itemEle js-p">Bán chạy</p>
+                            </div>
+                        </div>
+                        <div class="content__items-nav-price js-itemBox2">
+                            <p class="js-price">Giá</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <div class="content__items-nav-price-sub">
+                                <p class="js-itemEle2 js-downToUp" style="padding: 12px 8px 12px 8px;">Giá: Thấp đến cao</p>
+                                <p class="js-itemEle2 js-upToDown" style="padding: 12px 8px 12px 8px;">Giá: Cao đến thấp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__items-nav-right">
+                        <div class="content__items-nav-number">
+                            <p style="color: #FB5533;">1</p>
+                            <p>/15</p>
+                        </div>
+                        <div class="content__items-nav-side">
+                            <i class="fa-solid fa-angle-left"></i>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__items-main">
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-main-list col l-5-c c-6 m-3 ">
+                        <a href="#" class="content__item-main-list-a">
+                            <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
+                            <div class="content__items-main-info">
+                                <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
+                                <p class="content__info-old-price">40.000.000đ</p>
+                                <p class="content__info-new-price">399.000đ</p>
+                                <div class="content__items-main-rate">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div class="content__items-main-rate-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>Đã bán 2k</p>
+                                </div>
+                                <span>Ninh Bình</span>    
+                            </div>
+                            <div class="content__items-main-sub1">
+                                <p>Yêu thích</p>
+                            </div>
+                            <div class="content__items-main-sub2">
+                                <p class="content-sub2-1">90%</p>
+                                <p class="content-sub2-2">Giảm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__items-footer">
+                        <a href="">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                        <a href="" style="background-color: #FB5533; color: #fff;">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">...</a>
+                        <a href="">15</a>
+                        <a href="">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="content__items col c-10">
-            <div class="content__items-nav">
-                <div class="content__items-nav-left">
-                    <div class="content__items-nav-info">
-                        <p style="background-color: #EDEDED; cursor: default;">Sắp xếp theo</p>
-                        <div class="content__items-nav-info-main js-itemBox">
-                            <p class="js-itemEle js-p">Phổ biến</p>
-                            <p class="js-itemEle js-p">Mới nhất</p>
-                            <p class="js-itemEle js-p">Bán chạy</p>
-                        </div>
-                    </div>
-                    <div class="content__items-nav-price js-itemBox2">
-                        <p class="js-price">Giá</p>
-                        <i class="fa-solid fa-chevron-down"></i>
-                        <div class="content__items-nav-price-sub">
-                            <p class="js-itemEle2 js-downToUp" style="padding: 12px 8px 12px 8px;">Giá: Thấp đến cao</p>
-                            <p class="js-itemEle2 js-upToDown" style="padding: 12px 8px 12px 8px;">Giá: Cao đến thấp</p>
-                        </div>
-                    </div>
+    </content>
+    <footer id="footer" class="row grid wide">
+        <div class="footer__form col c-3">
+            <p class="footer__top">CHĂM SÓC KHÁCH HÀNG</p>
+            <div class="footer__bottom">
+                <a href="#">Trung Tâm Trợ Giúp</a>
+                <a href="#">Shopee Blog</a>
+                <a href="#">Shopee Mail</a>
+                <a href="#">Hướng Dẫn Mua Hàng</a>
+                <a href="#">Thanh Toán</a>
+                <a href="#">Shoppe Xu</a>
+                <a href="#">Vận chuyển</a>
+                <a href="#">Trả Hàng & Hoàn Tiền</a>
+                <a href="#">Chăm Sóc Khách Hàng</a>
+                <a href="#">Chính Sách Bảo Hành</a>
+            </div>
+        </div>    
+        <div class="footer__form col c-3">
+            <p class="footer__top">VỀ SHOPEE</p>
+            <div class="footer__bottom">
+                <a href="#">Giới Thiệu Về Shopee Việt Nam</a>
+                <a href="#">Tuyển dụng</a>
+                <a href="#">Điều Khoản Shopee</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Chính hãng</a>
+                <a href="#">Kênh người bán</a>
+                <a href="#">Flash sales</a>
+                <a href="#">Chương Trình Tiếp Thị Liên Kết Shopee</a>
+                <a href="#">Liên hệ với truyền thông</a>
+            </div>
+        </div>
+        <div class="footer__form col c-3">
+            <p class="footer__top">THEO DÕI CHÚNG TÔI TRÊN</p>
+            <div class="footer__bottom footer__follow-items">
+                <div class="footer__follow-item">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <a>Facebook</a>
                 </div>
-                <div class="content__items-nav-right">
-                    <div class="content__items-nav-number">
-                        <p style="color: #FB5533;">1</p>
-                        <p>/15</p>
-                    </div>
-                    <div class="content__items-nav-side">
-                        <i class="fa-solid fa-angle-left"></i>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
+                <div class="footer__follow-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a>Instagram</a>
+                </div>
+                <div class="footer__follow-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a>LinkedIn</a>
                 </div>
             </div>
-            <div class="content__items-main">
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content__items-main-list col c-5-c">
-                    <a href="#" class="content__item-main-list-a">
-                        <img src="./asset/img/270073284_333768798366600_5466013887121294721_n.jpg" alt="">
-                        <div class="content__items-main-info">
-                            <p class="content__info-desc">Cave giá rẻ tươi tắn xinh xắn sẵn sàng phục vụ Minh Nguyễn</p>
-                            <p class="content__info-old-price">40.000.000đ</p>
-                            <p class="content__info-new-price">299.000đ</p>
-                            <div class="content__items-main-rate">
-                                <i class="fa-regular fa-heart"></i>
-                                <div class="content__items-main-rate-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>Đã bán 2k</p>
-                            </div>
-                            <span>Ninh Bình</span>    
-                        </div>
-                        <div class="content__items-main-sub1">
-                            <p>Yêu thích</p>
-                        </div>
-                        <div class="content__items-main-sub2">
-                            <p class="content-sub2-1">99,25%</p>
-                            <p class="content-sub2-2">Giảm</p>
-                        </div>
-                    </a>
+        </div>    
+        <div class="footer__form col c-3">
+            <p class="footer__top">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</p>
+            <div class="footer__bottom footer__bottom-download">
+                <img class="footer__download-qr-pic" src="./asset/img/qr-code.png" alt="">
+                <div class="footer__download-app-pic">
+                    <img src="./asset/img/appstore.png " alt="">
+                    <img src="./asset/img/googleplay.png " alt="">
+                    <img src="./asset/img/gallery.png " alt="">
                 </div>
             </div>
         </div>
-    </div>
-    <foot id="footer">
-
-    </foot>
+    </footer>
     <!-- modal__sign-in -->
     <div class="modal js-modalSignIn">
         <div class="modal__main">
@@ -637,6 +741,7 @@
                 for(const itemBoxChild of itemBoxChilds){
                     itemBoxChild.classList.remove('add-background-color', 'add-text-color')
                     itemBox2.classList.remove('add-background-color', 'add-text-color')
+                    changePrice.innerHTML = 'Giá'
                     this.classList.add('add-background-color', 'add-text-color')
                 }
             })
@@ -657,6 +762,33 @@
         }
         downToUp.addEventListener('click', addDownToUp)
         upToDown.addEventListener('click',addUpToDown)
+    </script>
+    <!-- change mobile text decor -->
+    <script>
+        // change text1
+        const mobileBtns1 = document.querySelectorAll('.js-mobileBtn1')
+        const mobileBtns1Parent = document.querySelector('.js-mobileBtns1')
+        const mobileBtns1Childs = mobileBtns1Parent.children
+        for (const mobileBtn1 of mobileBtns1){
+            mobileBtn1.addEventListener('click',function(){
+                for(const mobileBtns1Child of mobileBtns1Childs){
+                    mobileBtns1Child.classList.remove('add__text-decor')
+                    this.classList.add('add__text-decor')
+                }
+            })
+        }
+        // change text2
+        const mobileBtns2 = document.querySelectorAll('.js-mobileBtn2')
+        const mobileBtns2Parent = document.querySelector('.js-mobileBtns2')
+        const mobileBtns2Childs = mobileBtns2Parent.children
+        for (const mobileBtn2 of mobileBtns2){
+            mobileBtn2.addEventListener('click',function(){
+                for(const mobileBtns2Child of mobileBtns2Childs){
+                    mobileBtns2Child.classList.remove('add__text-decor')
+                    this.classList.add('add__text-decor')
+                }
+            })
+        }
     </script>
 </body>
 </html>
