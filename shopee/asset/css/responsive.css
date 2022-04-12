@@ -56,9 +56,9 @@
     }
     .header__mobile input:focus ~ .header__search-his{
         display: block;
-        left: 8.4%;
+        left: 16.6%;
         top: 56px;
-        width: 83.2%;
+        width: 66.8%;
     }
     .content__items-nav{
         display: none;
