@@ -153,21 +153,30 @@
             </div>
         </div>
         <div class="header__mobile-nav">
-            <div class="header__mobile-nav-1 js-mobileBtns1">
-                <p class="js-mobileBtn1 add__text-decor">Sản phẩm</p>
-                <p class="js-mobileBtn1 separate">Màn hình</p>
-                <p class="js-mobileBtn1 separate">Thiết bị lưu trữ</p>
-            </div>
             <div class="header__mobile-nav-2 js-mobileBtns2">
                 <p class="js-mobileBtn2 add__text-decor">Phổ biến</p>
                 <p class="js-mobileBtn2 separate">Mới nhất</p>
                 <p class="js-mobileBtn2 separate">Bán chạy</p>
-                <label for="change__price-mobile" class="btnmb js-mobileBtn2 separate">
+                <label for="change__price-mobile" class="js-mobileBtn2 separate">
                     Giá
                     <input id="change__price-mobile" type="checkbox">
                     <i class="fa-solid fa-arrow-up"></i>
                     <i class="fa-solid fa-arrow-down"></i>
                 </label>
+            </div>
+            <div class="header__mobile-nav-1">
+                <ul class="header__mobile-nav-1-list">
+                    <li class="header__mobile-nav-1-item">Cave giá rẻ</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh ngu si</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh óc chó</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh đáng yêu</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh hay dỗi</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh ngon nghẻ</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh ti to</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh ngáo ngơ</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh dâm dê</li>
+                    <li class="header__mobile-nav-1-item">Thùy Linh thèm thuồng</li>
+                </ul>
             </div>
         </div>
     </header>
@@ -765,18 +774,6 @@
     </script>
     <!-- change mobile text decor -->
     <script>
-        // change text1
-        const mobileBtns1 = document.querySelectorAll('.js-mobileBtn1')
-        const mobileBtns1Parent = document.querySelector('.js-mobileBtns1')
-        const mobileBtns1Childs = mobileBtns1Parent.children
-        for (const mobileBtn1 of mobileBtns1){
-            mobileBtn1.addEventListener('click',function(){
-                for(const mobileBtns1Child of mobileBtns1Childs){
-                    mobileBtns1Child.classList.remove('add__text-decor')
-                    this.classList.add('add__text-decor')
-                }
-            })
-        }
         // change text2
         const mobileBtns2 = document.querySelectorAll('.js-mobileBtn2')
         const mobileBtns2Parent = document.querySelector('.js-mobileBtns2')
